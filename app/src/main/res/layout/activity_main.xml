@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.activities.MainActivity">
+
+    <!-- Current Weather Section -->
+    <LinearLayout
+        android:id="@+id/currentWeatherLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/currentTemperatureTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="Current Temperature: "
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/currentDescriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Description: " />
+
+        <TextView
+            android:id="@+id/currentHumidityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Humidity: " />
+
+        <!-- Add more TextViews for additional weather information as needed -->
+
+    </LinearLayout>
+
+    <!-- Weekly Forecast Section -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/weeklyForecastRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/currentWeatherLayout"
+        android:layout_marginTop="16dp"
+        android:scrollbars="vertical" />
+
+</RelativeLayout>
